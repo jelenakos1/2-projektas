@@ -1,6 +1,7 @@
 <h1>show</h1>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,33 @@
 
     <title>Companies</title>
 </head>
+
 <body>
     <div class="container">
-    <body>
-    <div class="container">
-        <h2> {{$company->name}} {{$company->name}}  </h2>
-            <p>Id : {{$company->id}}</p>
-        <p>Name : {{$company->name}}</p>
-        <p>Type : {{$company->type}}</p>
-        <p>Description : {{$company->description}}</p>
-        
-
-        <form method="post" action="{{route('company.destroy', [$company])}}">
-            @csrf
-            <button class="btn btn-danger" type="submit">Delete</button>
-        </form>
-        <a class="btn btn-secondary" href="{{route('company.index')}}">Back</a>
+        <a class="btn btn-primary" href="{{route('company.create')}}">Create new company</a>
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Company_type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>{{$company->id}}</td>
+                <td>{{$company->name}}</td>
+                <td>{{$company->type}}</td>
+                <td>{{$company->description}}</td>
+                <td>
+                    <a class="btn btn-secondary" href="{{route('company.index')}}">go</a>
+                    <form method="post" action="{{route('company.destroy', [$company])}}">
+                        @csrf
+                    </form>
+                </td>
+            </tr>
+        </table>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+
 </html>

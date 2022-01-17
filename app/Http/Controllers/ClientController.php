@@ -58,7 +58,7 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
-        return view('clients.show', ['client'=> $client]);
+        return view('clients.show', ['client'=>$client]);
     }
 
     /**
@@ -69,7 +69,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        return view('clients.edit', ['client' => $client]);
+        return view('clients.edit', ['client'=>$client]);
     }
 
     /**
