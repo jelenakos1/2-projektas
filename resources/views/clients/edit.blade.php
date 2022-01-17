@@ -18,12 +18,12 @@
 
        <input class="form-control" type='text' name="client_name" value='{{$client->name}}'/>
       <input type="text" class="form-control" type='text' name="client_surname" value='{{$client->surname}}'/>
-      <input type="text" class="form-control" type='text'  name="company_id" value='{{$client->company_id}}'/> 
-     <input type="text" class="form-control" type='text'  name="image_url" value='{{$client->image_url}}'/>
+      <input type="text" class="form-control" type='text'  name="client_company_id" value='{{$client->company_id}}'/> 
+     <input type="text" class="form-control" type='text'  name="client_image_url" value='{{$client->image_url}}'/>
 
     @csrf
 
-    <button class="btn btn-primary" type='submit'>Edit</button>
+    <button class="btn btn-primary" type='submit'>Save</button>
             <a class="btn btn-secondary" href="{{route('client.index')}}">Back</a>
 </form>
 </div>

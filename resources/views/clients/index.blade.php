@@ -19,13 +19,14 @@
 
 <a class="btn btn-primary" href="{{route('client.create')}}">Create new client</a>
 <table class="table table-striped">
-<table>
+
     <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Surname</th>
-        <th>Company_id</th>
-        <th>Image_url</th>
+        <th>Company</th>
+        <th>Image</th>
+        <th></th>
     </tr>
 
     @foreach ($clients as $client)
@@ -35,13 +36,13 @@
         <td>{{$client->surname}}</td>
         <td>{{$client->company_id}}</td>
         <td>{{$client->image_url}}</td>
-        <td>
-            <a class="btn btn-primary" href="{{route('client.edit', [$client])}}">Edit</a>
-            <a class="btn btn-secondary" href="{{route('client.show', [$client])}}">Show</a>
+        <td class="row justify-content-center">
+            <a class="btn btn-primary col-3 mr-3" href="{{route('client.edit', [$client])}}">Edit</a>
+            <a class=" ml-3 btn btn-secondary col-3" href="{{route('client.show', [$client])}}">Show</a>
 
-            <form method="post" action="{{route('client.destroy', [$client])}}">
+            <form class="col-3" method="post" action="{{route('client.destroy', [$client])}}">
                 @csrf
-                <button class="btn btn-danger" type="submit">Delete</button>
+                <button class="btn btn-danger " type="submit">Delete</button>
             </form>
         </td>
 </tr>

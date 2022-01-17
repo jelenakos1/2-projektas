@@ -16,10 +16,12 @@
 
 <form method="POST" action="{{ route('client.store') }}">
 
+
+
        <input class="form-control" type="text" name="client_name" placeholder="Client Name"/>
-      <input type="text" class="form-control" type='text' name="client_surname" placeholder="Client Surame"/>
-      <input type="text" class="form-control" type='text'  name="company_id" placeholder="Company Id"/> 
-     <input type="text" class="form-control" type='text'  name="image_url" placeholder="Image url"/>
+      <input class="form-control" type='text' name="client_surname" placeholder="Client Surname"/>
+      <input class="form-control" type='number'  name="client_company_id" placeholder="Company Id"/> 
+     <input class="form-control" type='text'  name="client_image_url" placeholder="Image url"/>
 
     @csrf
 

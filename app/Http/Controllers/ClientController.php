@@ -42,7 +42,7 @@ class ClientController extends Controller
        
         $client->name = $request->client_name;
         $client->surname = $request->client_surname;
-        $client->company_id = $request->client_comapny_id;
+        $client->company_id = $request->client_company_id;
         $client->image_url = $request->client_image_url;
 
         $client->save();
@@ -84,7 +84,7 @@ class ClientController extends Controller
    
         $client->name = $request->client_name;
         $client->surname = $request->client_surname;
-        $client->company_id = $request->client_comapny_id;
+        $client->company_id = $request->client_company_id;
         $client->image_url = $request->client_image_url;
 
         $client->save();

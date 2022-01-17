@@ -11,9 +11,7 @@
 </head>
 <body>
     <div class="container">
-@if (count($clients) == 0)
-    <p>There is no clients</p>
-@endif
+
 
 
 <a class="btn btn-primary" href="{{route('client.create')}}">Create new client</a>
@@ -27,7 +25,7 @@
         <th>Image_url</th>
     </tr>
 
-    @foreach ($clients as $client)
+
     <tr>
         <td>{{$client->id}}</td>
         <td>{{$client->name}}</td>
@@ -35,16 +33,16 @@
         <td>{{$client->company_id}}</td>
         <td>{{$client->image_url}}</td>
         <td>
-            <a class="btn btn-primary" href="{{route('client.edit', [$client])}}">Edit</a>
-            <a class="btn btn-secondary" href="{{route('client.show', [$client])}}">Show</a>
+           
+            <a class="btn btn-secondary" href="{{route('client.index')}}">go</a>
 
             <form method="post" action="{{route('client.destroy', [$client])}}">
                 @csrf
-                <button class="btn btn-danger" type="submit">Delete</button>
+             
             </form>
         </td>
 </tr>
-    @endforeach
+
     
 </table>
 </div>
