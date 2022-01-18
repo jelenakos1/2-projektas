@@ -26,7 +26,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('company.create');
+        return view('companies.create');
     }
 
     /**
@@ -39,7 +39,7 @@ class CompanyController extends Controller
     {
         $company = new Company;
         $company->name = $request->company_name;
-        $company->type = $request->company_surname;
+        $company->type = $request->company_type;
         $company->description = $request->company_description;
         $company->save();
 
@@ -79,7 +79,7 @@ class CompanyController extends Controller
     public function update(Request $request, Company $company)
     {
         $company->name = $request->company_name;
-        $company->type = $request->company_surname;
+        $company->type = $request->company_type;
         $company->description = $request->company_description;
         $company->save();
 
@@ -94,6 +94,7 @@ class CompanyController extends Controller
      */
     public function destroy(Company $company)
     {
-        //
+        $company->delete();
+        return redirect()->route('company.index');
     }
 }

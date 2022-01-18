@@ -43,12 +43,12 @@ Route::prefix('companies')->group(function() {
   Route::get('','App\HTTp\Controllers\CompanyController@index')->name('company.index');
   //edit
   Route::get('edit/{company}','App\HTTp\Controllers\CompanyController@edit')->name('company.edit');
-  Route::post('update/{company}','App\HTTp\Controllers\ClientController@update')->name('company.update');
+  Route::post('update/{company}','App\HTTp\Controllers\CompanyController@update')->name('company.update');
   //create
   Route::get('create','App\HTTp\Controllers\CompanyController@create')->name('company.create');
   Route::post('store','App\HTTp\Controllers\CompanyController@store')->name('company.store');
   //delete
-  Route::post('destroy/{company}','App\HTTp\Controllers\ClientController@destroy')->name('company.destroy');
+  Route::post('destroy/{company}','App\HTTp\Controllers\CompanyController@destroy')->name('company.destroy');
   //show
-  Route::get('show/{company}','App\HTTp\Controllers\ClientController@show')->name('company.show');
+  Route::get('show/{company}','App\HTTp\Controllers\CompanyController@show')->name('company.show');
 });
