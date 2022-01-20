@@ -17,11 +17,24 @@
 
         <form method="POST" action="{{ route('client.store') }}">
 
-            <input class="form-control" type="text" name="client_name" placeholder="Client Name" />
-            <input class="form-control" type='text' name="client_surname" placeholder="Client Surname" />
-            <input class="form-control" type='number' name="client_company_id" placeholder="Company Id" />
-            <input class="form-control" type='text' name="client_image_url" placeholder="Image url" />
+            <input class="form-control" type="text" value="Test" name="client_name" placeholder="Client Name" />
+            <input class="form-control" type='text' value="Test" name="client_surname" placeholder="Client Surname" />
+            <input class="form-control" type='number' value="Test" name="client_username" placeholder="Client username" />
 
+
+            <select name="client_company_id" class="form-control">
+                {{-- @for ($i=1; $i<=250; $i++)
+                        <option value="{{$i}}">{{$i}}</option>
+                @endfor --}}
+
+                @foreach ($select_values as $company)
+                <option value="{{$company->id}}">{{$company->name}}</option>
+                @endforeach
+
+
+            </select>
+
+            <input class="form-control" type='text' name="client_image_url" value="Test" placeholder="Client URL" />
             @csrf
 
             <button class="btn btn-primary" type='submit'>Add</button>
@@ -29,6 +42,7 @@
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -25,9 +25,10 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Surname</th>
-                <th>Company</th>
-                <th>Image</th>
-                <th></th>
+                <th>Username</th>
+                <th>Company ID</th>
+                <th>Image Url</th>
+                <th>Actions</th>
             </tr>
 
             @foreach ($clients as $client)
@@ -35,6 +36,7 @@
                 <td>{{$client->id}}</td>
                 <td>{{$client->name}}</td>
                 <td>{{$client->surname}}</td>
+                <td>{{$client->username}}</td>
                 <td>{{$client->company_id}}</td>
                 <td>{{$client->image_url}}</td>
                 <td class="row justify-content-center">

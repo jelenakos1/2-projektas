@@ -31,6 +31,7 @@
                     <a class="btn btn-secondary" href="{{route('company.index')}}">go</a>
                     <form method="post" action="{{route('company.destroy', [$company])}}">
                         @csrf
+                        <button class="btn btn-danger" type="submit">Delete</button>
                     </form>
                 </td>
             </tr>
