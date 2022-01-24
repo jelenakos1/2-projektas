@@ -12,7 +12,7 @@
     <div class="container">
         <h1>Create Company</h1>
 
-        <form method='POST' action='{{route('company.store')}}' >
+        <form method='POST' action="{{route('company.store')}}" >
 
             {{-- 
              // ID

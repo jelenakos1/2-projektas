@@ -28,7 +28,8 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('clients.create', ['select_values' => $select_values]);
+        $clients = Client::all();
+        return view('clients.create', ['clients'=>$clients]);
     }
 
     /**
@@ -59,7 +60,7 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
-        return view('client.show', ['client'=>$client]);
+        return view('clients.show', ['client'=>$client]);
     }
 
     /**
@@ -70,8 +71,8 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        $select_values = Company::all();
-        return view('client.edit', ['client'=>$client, 'select_values' => $select_values]);
+        $select_values = Client::all();
+        return view('clients.edit', ['client'=>$client, 'select_values' => $select_values]);
     }
 
     /**

@@ -39,7 +39,7 @@
             <a class="btn btn-primary" href="{{route('company.edit', [$company])}}">Edit</a>
             <a class="btn btn-secondary" href="{{route('company.show', [$company])}}">Show</a>
 
-            <form method="post" action='{{route('company.destroy', [$company])}}''>
+            <form method="post" action="{{route('company.destroy', [$company])}}">
                 @csrf
                 <button class="btn btn-danger" type="submit">Delete</button>
             </form>

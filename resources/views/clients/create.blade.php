@@ -18,8 +18,8 @@
         <form method="POST" action="{{ route('client.store') }}">
 
             <input class="form-control" type="text" value="Test" name="client_name" placeholder="Client Name" />
-            <input class="form-control" type='text' value="Test" name="client_surname" placeholder="Client Surname" />
-            <input class="form-control" type='number' value="Test" name="client_username" placeholder="Client username" />
+            <input class="form-control" type="text" value="Test" name="client_surname" placeholder="Client Surname" />
+            <input class="form-control" type="text" value="Test" name="client_username" placeholder="Client username" />
 
 
             <select name="client_company_id" class="form-control">
@@ -27,14 +27,16 @@
                         <option value="{{$i}}">{{$i}}</option>
                 @endfor --}}
 
-                @foreach ($select_values as $company)
+              {{-- @foreach ($clients as $company)
                 <option value="{{$company->id}}">{{$company->name}}</option>
-                @endforeach
+                @endforeach --}}
 
 
             </select>
 
-            <input class="form-control" type='text' name="client_image_url" value="Test" placeholder="Client URL" />
+            <input class="form-control" type='text' name="client_name" value="test" />
+            <input class="form-control" type='text' name="client_surname" value="test" />
+            <input class="form-control" type='text' name="client_username" value="test" />
             @csrf
 
             <button class="btn btn-primary" type='submit'>Add</button>

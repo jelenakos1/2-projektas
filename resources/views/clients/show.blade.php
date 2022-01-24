@@ -19,7 +19,7 @@
         <p>Company Id : {{$client->company_id}}</p>
         <p>Image Url : {{$client->image_url}}</p>
 
-        <form method="post" action='{{route('client.destroy', [$client])}}''>
+        <form method="post" action="{{route('client.destroy', [$client])}}">
             @csrf
             <button class="btn btn-danger" type="submit">Delete</button>
         </form>
